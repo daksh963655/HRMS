@@ -7,9 +7,7 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>
-      eCommerce Dashboard | HRMS 
-    </title>
+    <title>eCommerce Dashboard | HRMS</title>
     <link rel="icon" href="favicon.ico" />
     <link href="style.css" rel="stylesheet" />
     <!-- Alpine.js for interactive components -->
@@ -50,11 +48,10 @@
     <div class="flex h-screen overflow-hidden">
       <!-- ===== Sidebar Start ===== -->
       <aside
-        :class="sidebarToggle ? 'translate-x-0 xl:w-[290px]' : '-translate-x-full xl:translate-x-0 xl:w-[90px]'"
+        :class="sidebarToggle ? 'translate-x-0 xl:w-[290px] ' : '-translate-x-full xl:translate-x-0 xl:w-[90px]  text-noshow'"
         class="sidebar fixed top-0 left-0 z-9999 flex h-screen w-[290px] flex-col overflow-y-auto border-r border-gray-200 bg-white px-5 transition-all duration-300 xl:static xl:translate-x-0 dark:border-gray-800 dark:bg-black"
         @mouseenter="if (sidebarToggle) return; sidebarToggle = false"
         @mouseleave="if (sidebarToggle) return; sidebarToggle = false"
-        @click.outside="sidebarToggle = false"
       >
         <!-- SIDEBAR HEADER -->
         <div
@@ -100,7 +97,7 @@
                 </span>
                 <svg
                   :class="sidebarToggle ? 'xl:block hidden' : 'hidden'"
-                  class="menu-group-icon mx-auto fill-current"
+                  class="menu-group-icon mx-auto fill-current dark:fill-white"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -121,34 +118,94 @@
                 <li>
                   <a
                     href="index.html"
-                    class="menu-dropdown-item group"
+                    class="menu-item group menu-item-inactive"
                     :class="page === 'signup' ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'"
                   >
-                    <img
-                      src="./src/images/brand/dashboard-svgrepo-com.svg"
-                      alt="icon"
-                      class="me-3"
-                      width="30"
+                    <svg
+                      viewBox="0 -0.5 25 25"
+                      fill="currentColor"
                       height="30"
-                    />
-                    Dashboard
+                      width="30"
+                      class="fill-black dark:fill-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.918 10.0005H7.082C6.66587 9.99708 6.26541 10.1591 5.96873 10.4509C5.67204 10.7427 5.50343 11.1404 5.5 11.5565V17.4455C5.5077 18.3117 6.21584 19.0078 7.082 19.0005H9.918C10.3341 19.004 10.7346 18.842 11.0313 18.5502C11.328 18.2584 11.4966 17.8607 11.5 17.4445V11.5565C11.4966 11.1404 11.328 10.7427 11.0313 10.4509C10.7346 10.1591 10.3341 9.99708 9.918 10.0005Z"
+                          stroke="#000000"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.918 4.0006H7.082C6.23326 3.97706 5.52559 4.64492 5.5 5.4936V6.5076C5.52559 7.35629 6.23326 8.02415 7.082 8.0006H9.918C10.7667 8.02415 11.4744 7.35629 11.5 6.5076V5.4936C11.4744 4.64492 10.7667 3.97706 9.918 4.0006Z"
+                          stroke="#000000"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M15.082 13.0007H17.917C18.3333 13.0044 18.734 12.8425 19.0309 12.5507C19.3278 12.2588 19.4966 11.861 19.5 11.4447V5.55666C19.4966 5.14054 19.328 4.74282 19.0313 4.45101C18.7346 4.1592 18.3341 3.9972 17.918 4.00066H15.082C14.6659 3.9972 14.2654 4.1592 13.9687 4.45101C13.672 4.74282 13.5034 5.14054 13.5 5.55666V11.4447C13.5034 11.8608 13.672 12.2585 13.9687 12.5503C14.2654 12.8421 14.6659 13.0041 15.082 13.0007Z"
+                          stroke="#000000"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M15.082 19.0006H17.917C18.7661 19.0247 19.4744 18.3567 19.5 17.5076V16.4936C19.4744 15.6449 18.7667 14.9771 17.918 15.0006H15.082C14.2333 14.9771 13.5256 15.6449 13.5 16.4936V17.5066C13.525 18.3557 14.2329 19.0241 15.082 19.0006Z"
+                          stroke="#000000"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </g>
+                    </svg>
+                    <span class="menu-item-text">Dashboard</span>
                   </a>
                 </li>
 
                 <li>
                   <a
                     href="company.html"
-                    class="menu-dropdown-item group"
+                    class="menu-item group menu-item-inactive"
                     :class="page === 'signup' ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'"
                   >
-                    <img
-                      src="./src/images/brand/company-svgrepo-com.svg"
-                      alt="icon"
-                      class="me-3"
-                      width="30"
+                    <svg
+                      fill="currentColor"
                       height="30"
-                    />
-                    Company
+                      width="30"
+                      viewBox="0 0 50 50"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      class="fill-black dark:fill-white"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path
+                          d="M8 2L8 6L4 6L4 48L46 48L46 14L30 14L30 6L26 6L26 2 Z M 10 4L24 4L24 8L28 8L28 46L19 46L19 39L15 39L15 46L6 46L6 8L10 8 Z M 10 10L10 12L12 12L12 10 Z M 14 10L14 12L16 12L16 10 Z M 18 10L18 12L20 12L20 10 Z M 22 10L22 12L24 12L24 10 Z M 10 15L10 19L12 19L12 15 Z M 14 15L14 19L16 19L16 15 Z M 18 15L18 19L20 19L20 15 Z M 22 15L22 19L24 19L24 15 Z M 30 16L44 16L44 46L30 46 Z M 32 18L32 20L34 20L34 18 Z M 36 18L36 20L38 20L38 18 Z M 40 18L40 20L42 20L42 18 Z M 10 21L10 25L12 25L12 21 Z M 14 21L14 25L16 25L16 21 Z M 18 21L18 25L20 25L20 21 Z M 22 21L22 25L24 25L24 21 Z M 32 22L32 24L34 24L34 22 Z M 36 22L36 24L38 24L38 22 Z M 40 22L40 24L42 24L42 22 Z M 32 26L32 28L34 28L34 26 Z M 36 26L36 28L38 28L38 26 Z M 40 26L40 28L42 28L42 26 Z M 10 27L10 31L12 31L12 27 Z M 14 27L14 31L16 31L16 27 Z M 18 27L18 31L20 31L20 27 Z M 22 27L22 31L24 31L24 27 Z M 32 30L32 32L34 32L34 30 Z M 36 30L36 32L38 32L38 30 Z M 40 30L40 32L42 32L42 30 Z M 10 33L10 37L12 37L12 33 Z M 14 33L14 37L16 37L16 33 Z M 18 33L18 37L20 37L20 33 Z M 22 33L22 37L24 37L24 33 Z M 32 34L32 36L34 36L34 34 Z M 36 34L36 36L38 36L38 34 Z M 40 34L40 36L42 36L42 34 Z M 32 38L32 40L34 40L34 38 Z M 36 38L36 40L38 40L38 38 Z M 40 38L40 40L42 40L42 38 Z M 10 39L10 44L12 44L12 39 Z M 22 39L22 44L24 44L24 39 Z M 32 42L32 44L34 44L34 42 Z M 36 42L36 44L38 44L38 42 Z M 40 42L40 44L42 44L42 42Z"
+                        ></path>
+                      </g>
+                    </svg>
+                    <span class="menu-item-text">Company</span>
                   </a>
                 </li>
                 <!-- Menu Item Dashboard -->

@@ -8368,6 +8368,11 @@ pre[class*="language-"] {
 .sidebar .logo {
   display: block;
 }
+.sidebar.text-noshow{
+}
+.sidebar.text-noshow span.menu-item-text{
+    display: none;
+}
 .sidebar .logo-icon {
   display: none;
 }
